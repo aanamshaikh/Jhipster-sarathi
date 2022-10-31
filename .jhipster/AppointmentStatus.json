@@ -1,0 +1,20 @@
+{
+  "applications": "*",
+  "changelogDate": "20221031093929",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "appointment_status",
+  "fields": [
+    {
+      "fieldName": "type",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "AppointmentStatus",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceClass"
+}

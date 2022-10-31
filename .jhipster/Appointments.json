@@ -1,0 +1,62 @@
+{
+  "applications": "*",
+  "changelogDate": "20221031093924",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "appointments",
+  "fields": [
+    {
+      "fieldName": "slotTime",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "bookDay",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "isCancelled",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "requestedAt",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "updatedAt",
+      "fieldType": "Instant"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Appointments",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "patients",
+      "relationshipName": "patient",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "doctors",
+      "relationshipName": "doctor",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "reasons",
+      "relationshipName": "reason",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "cancelled",
+      "relationshipName": "cancelReason",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "appointmentStatus",
+      "relationshipName": "status",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceClass"
+}

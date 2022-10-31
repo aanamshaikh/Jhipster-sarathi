@@ -1,0 +1,31 @@
+{
+  "applications": "*",
+  "changelogDate": "20221031093923",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "specialisations",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Specialisations",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "doctors",
+      "otherEntityRelationshipName": "specialisation",
+      "relationshipName": "doctors",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "serviceClass"
+}

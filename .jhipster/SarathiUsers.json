@@ -1,0 +1,58 @@
+{
+  "applications": "*",
+  "changelogDate": "20221031093919",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "sarathi_users",
+  "fields": [
+    {
+      "fieldName": "username",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "userType",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "userTypeId",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "emailId",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "password",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "isDisabled",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "createdAt",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "updatedAt",
+      "fieldType": "Instant"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "SarathiUsers",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "patients",
+      "otherEntityRelationshipName": "parent",
+      "relationshipName": "patients",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "serviceClass"
+}

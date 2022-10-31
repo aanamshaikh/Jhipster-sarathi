@@ -1,0 +1,20 @@
+{
+  "applications": "*",
+  "changelogDate": "20221031093926",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "weekdays",
+  "fields": [
+    {
+      "fieldName": "day",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Weekdays",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceClass"
+}

@@ -1,0 +1,92 @@
+
+entity SarathiUsers{
+	username String required
+    userType String
+    userTypeId Integer
+    emailId String required
+    password String required
+    isDisabled Boolean
+    createdAt Instant
+    updatedAt Instant
+}
+
+entity Patients{
+	name String
+    gender String
+    dob LocalDate
+    mobileNumber String
+    address String
+}
+
+entity Receptionists{
+	name String
+    gender String
+    dob LocalDate
+    mobileNumber String
+    address String
+    qualification String
+}
+
+entity Doctors{
+	name String
+    gender String
+    dob LocalDate
+    mobileNumber String
+    address String
+    qualification String
+    experience Integer max(50)
+}
+
+entity Specialisations{
+	name String
+    description String
+}
+
+entity Appointments{
+    slotTime  Instant
+    bookDay   LocalDate
+    isCancelled  Boolean
+    requestedAt Instant
+    updatedAt  Instant
+}
+
+entity Consultations{
+    inTime Instant
+    outTime Instant
+}
+
+entity Weekdays{
+	day String
+}
+
+entity Reasons{
+	name String
+}
+
+entity Cancelled{
+	reason String
+}
+
+entity AppointmentStatus{
+	type String
+}
+
+relationship ManyToOne{
+    Appointments{patient} to Patients
+    Appointments{doctor} to Doctors
+    Appointments{reason} to Reasons
+    Appointments{cancelReason} to Cancelled
+    Appointments{status} to AppointmentStatus
+    Consultations{appointment} to Appointments
+}
+
+relationship OneToMany{
+	SarathiUsers{patients} to Patients{parent}
+    Specialisations{doctors} to Doctors{specialisation(name)}
+}
+
+paginate Appointments, Consultations with pagination
+
+service * with serviceClass
+
+dto * with mapstruct

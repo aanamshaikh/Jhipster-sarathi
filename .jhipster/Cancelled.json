@@ -1,0 +1,20 @@
+{
+  "applications": "*",
+  "changelogDate": "20221031093928",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "cancelled",
+  "fields": [
+    {
+      "fieldName": "reason",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Cancelled",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceClass"
+}

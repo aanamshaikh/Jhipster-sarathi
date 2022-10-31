@@ -1,0 +1,30 @@
+{
+  "applications": "*",
+  "changelogDate": "20221031093925",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "consultations",
+  "fields": [
+    {
+      "fieldName": "inTime",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "outTime",
+      "fieldType": "Instant"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Consultations",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "appointments",
+      "relationshipName": "appointment",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceClass"
+}

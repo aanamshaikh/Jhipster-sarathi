@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+    <!--
+        Added the constraints for entity Appointments.
+    -->
+    <changeSet id="20221031093924-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="patient_id"
+                                 baseTableName="appointments"
+                                 constraintName="fk_appointments__patient_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="patients"/>
+
+        <addForeignKeyConstraint baseColumnNames="doctor_id"
+                                 baseTableName="appointments"
+                                 constraintName="fk_appointments__doctor_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="doctors"/>
+
+        <addForeignKeyConstraint baseColumnNames="reason_id"
+                                 baseTableName="appointments"
+                                 constraintName="fk_appointments__reason_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="reasons"/>
+
+        <addForeignKeyConstraint baseColumnNames="cancel_reason_id"
+                                 baseTableName="appointments"
+                                 constraintName="fk_appointments__cancel_reason_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="cancelled"/>
+
+        <addForeignKeyConstraint baseColumnNames="status_id"
+                                 baseTableName="appointments"
+                                 constraintName="fk_appointments__status_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="appointment_status"/>
+    </changeSet>
+</databaseChangeLog>
